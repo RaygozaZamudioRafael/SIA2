@@ -7,7 +7,7 @@ from sklearn.datasets import make_moons, make_circles, make_classification
 from sklearn.model_selection import train_test_split
 
 #Import model
-from sklearn.svm import SVC
+from sklearn.tree import
 
 #Generate datasets
 rng = np.random.RandomState(2)
