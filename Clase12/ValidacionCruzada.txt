@@ -1,0 +1,27 @@
+Para la validacion es recomendable realizar un numero significativo estadisticamente hablando de
+el ds train y test esto con el objetivo de sacar una media para generar una particion robusta
+Lo malo con esto es que genera un grado factorial lo que lo vuelve demaciado pesado
+
+Otro metodo usualmente usado es el conocido como K-fold
+
+.... .... .... .... ....
+ p1   p2   p3   p4   p5
+p se conocen como KSS k doble S
+
+se elige p1 para probar y las demas para entrenar
+
+luego se realiza con p2 hasta p5
+
+.... .... .... .... ....
+ SS   p2   p3   p4   p5
+.... .... .... .... ....
+ p1   SS   p3   p4   p5
+.... .... .... .... ....
+ p1   p2   SS   p4   p5
+.... .... .... .... ....
+ p1   p2   p3   SS   p5
+.... .... .... .... ....
+ p1   p2   p3   p4   SS
+
+SS ES EL TEST Y DE ESTO SE REALIZA UN ENTRENAMIENTO A CADA ITERACION CON LO QUE SE PUEDE SACAR UNA 
+MEDIA, RECORDAR QUE LOS DS DEBEN TENER SUFICIENTES DATOS COMO PARA SER SIGNIFICATIVOS ESTADISTICAMENTE

@@ -1,0 +1,49 @@
+En vez de buscar aleatoriamente la busqueda de los hyperparametros, uno deberia buscar de forma
+automatica los mejores parametros siempre que el modelo sea aceptable. Si el modelo es grande
+debemos actuar como los optimizadores.
+
+Grandes modelos es babysitting
+Modelos pequeños se puede automatizar
+
+
+	N o Learning Rate
+ 1000	{ .   .   .       .   .
+ 100	{ .   .   .       .   .
+ 10	{ .   -   .       -   .
+ 1	{ .   .   -       .   .
+ 0.1	{ .   .   -       .   .
+ 0.01	{ .   .   .       .   -
+ 0.001	{ .   .   .       .   .
+	x------------------------ #Neuromas
+	  10  20  30 ... 100 110
+Probar todos los modelos se conocen como busqueda de regilla o GridSearch | O(n^k)
+
+Otro es RandomSearch O(m) (representado con - en el plano)
+
+Otra opcion es la implementacion del computo evolutivo
+
+___________________ . _______________________ . ___________________ . _______________________
+
+	     Train         Test
+	________________ ________
+
+		     Model
+Train ------->|fit|--------->  |Busqueda       |  Best model
+			       |Hyperparametros| ----------------->
+Test  ---------------------->  |	       |	
+						
+El problema con esto es que esta memorizando los datos ocacionando el sobre entrenamiento
+Esto refiriendose a buscar los hyperparametros utilizando el test
+
+
+     	    Train     Dev/Val  Test
+	____________  ______  ______
+
+
+
+
+
+
+
+
+
